@@ -9,7 +9,7 @@ export const Inquiries: CollectionConfig = {
     defaultColumns: ['name', 'kind', 'organization', 'phone', 'date', 'status', 'createdAt'],
     description: 'Zapytania o wypożyczalnię, wolontariat, wsparcie i wiadomości ogólne — wszystko w jednym miejscu.',
   },
-  access: { create: () => true },
+  access: { create: () => false, read: ({ req }) => !!req.user },
   fields: [
     {
       name: 'kind', label: 'Rodzaj', type: 'select', required: true, defaultValue: 'rental',

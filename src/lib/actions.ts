@@ -16,11 +16,17 @@ export async function createInquiry(_prev: FormState, form: FormData): Promise<F
   const message = String(form.get('message') || '').trim().slice(0, 4000)
   if (!name || !email) return { ok: false, message: 'Podaj imię i nazwisko oraz e-mail.' }
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return { ok: false, message: 'Sprawdź adres e-mail.' }
+  if (phone && !/^[+\d][\d\s()-]{6,}$/.test(phone)) return { ok: false, message: 'Sprawdź numer telefonu.' }
+  if ((kayaks && (kayaks < 0 || kayaks > 12)) || (bikes && (bikes < 0 || bikes > 20))) return { ok: false, message: 'Mamy 12 kajaków i 20 rowerów.' }
   const payload = await db()
+  try {
   await payload.create({
     collection: 'inquiries',
     data: { kind: (KINDS.has(kind) ? kind : 'message') as 'rental' | 'volunteer' | 'support' | 'message', name, organization, phone, email, date, kayaks, bikes, message },
   })
+  } catch {
+    return { ok: false, message: 'Nie udało się zapisać zgłoszenia. Napisz na fundacjanadbugiem@gmail.com.' }
+  }
   return {
     ok: true,
     message: kind === 'rental' ? 'Zgłoszenie trafiło do wypożyczalni. Artur oddzwoni i potwierdzi termin oraz liczbę sprzętu.' : 'Wiadomość dotarła. Odpowiadamy w ciągu kilku dni, zwykle szybciej.',

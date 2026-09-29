@@ -6,7 +6,7 @@ const KINDS: [string, string][] = [['rental', 'Wypożyczalnia kajaków i roweró
 
 export function InquiryForm({ kind = 'message', rental }: { kind?: string; rental?: boolean }) {
   const [state, action, pending] = useActionState<FormState, FormData>(createInquiry, { ok: false, message: '' })
-  if (state.ok) return <div className="done"><strong>Dziękujemy.</strong> {state.message}</div>
+  if (state.ok) return <div className="done" role="status"><strong>Dziękujemy.</strong> {state.message}</div>
   return (
     <form action={action} className="form">
       {rental ? <input type="hidden" name="kind" value="rental" /> : (
@@ -30,7 +30,7 @@ export function InquiryForm({ kind = 'message', rental }: { kind?: string; renta
         </div>
       )}
       <label>Wiadomość<textarea name="message" rows={4} placeholder={rental ? 'Skąd grupa, ile osób, czy potrzebna trasa i opieka' : ''} /></label>
-      {state.message && !state.ok && <p className="form-err">{state.message}</p>}
+      {state.message && !state.ok && <p className="form-err" role="alert">{state.message}</p>}
       <button className="btn btn-accent" disabled={pending}>{pending ? 'Wysyłanie…' : rental ? 'Wyślij zapytanie' : 'Wyślij wiadomość'}</button>
       <p className="note">{rental ? 'Mamy 12 kajaków i 20 rowerów. Grupy z sektora pomocy i integracji społecznej mogą liczyć na zniżki.' : 'Zgłoszenie trafia do panelu fundacji, bez pośredników.'}</p>
     </form>
