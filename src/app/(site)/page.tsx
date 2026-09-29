@@ -62,7 +62,7 @@ export default async function Home() {
         <div>
           <p className="kicker">Projekty</p>
           <h2 className="h2">Zadania publiczne, które prowadzimy</h2>
-          <p className="lead">Od 2015 roku realizujemy zadania zlecane przez Gminę Wyszków w otwartych konkursach ofert: pedagogikę osiedlową i ulicy, a od 2019 roku projekt „Juklandia”. Pełną listę z kwotami publikujemy na stronie.</p>
+          <p className="lead">Od 2015 roku realizujemy zadania zlecane przez Gminę Wyszków w otwartych konkursach ofert: pedagogikę osiedlową i ulicy, a od 2019 roku projekt „Juklandia”. Wybrane projekty z latami i kwotami dofinansowania są na osobnej stronie.</p>
           <div className="cta-row"><Link className="btn btn-solid" href="/projekty">Lista projektów</Link></div>
         </div>
         <ol className="projlist">

@@ -52,7 +52,7 @@ export default async function Page({ params }: Props) {
           {img && <img src={img} alt="" className="article-img" referrerPolicy="no-referrer" />}
           <div className="prose" style={{ whiteSpace: 'pre-line' }}>{post.body}</div>
           {post.project && <p className="projnote">{post.project}</p>}
-          {gal.length > 0 && <div className="mosaic">{gal.map((u) => <img key={u} src={u} alt="" loading="lazy" referrerPolicy="no-referrer" />)}</div>}
+          {gal.length > 0 && <div className="mosaic">{gal.map((u, i) => <img key={u} src={u} alt={`${post.title}, zdjęcie ${i + 1}`} loading="lazy" referrerPolicy="no-referrer" />)}</div>}
         </div></div>
         {more.docs.length > 0 && (
           <div className="section tint"><div className="wrap">
@@ -70,8 +70,8 @@ export default async function Page({ params }: Props) {
       <div className="section"><div className="wrap narrow">
         <div className="crumbs"><Link href="/">Start</Link><span>/</span><span>Projekty</span></div>
         <h1 className="h1">Projekty i zadania publiczne</h1>
-        <p className="lead">Fundacja realizuje zadania zlecane przez samorząd w otwartych konkursach ofert. Kwoty dofinansowania publikujemy tak, jak w sprawozdaniach.</p>
-        <table className="ptable"><tbody>
+        <p className="lead">Fundacja realizuje zadania zlecane przez samorząd w otwartych konkursach ofert. Poniżej wybrane projekty z listy publikowanej przez fundację, z kwotami dofinansowania.</p>
+        <table className="ptable"><thead><tr><th scope="col">Rok</th><th scope="col">Projekt</th><th scope="col" className="num">Dofinansowanie</th></tr></thead><tbody>
           {projects.docs.map((x) => (
             <tr key={x.id}>
               <td className="proj-year">{x.year}</td>
@@ -148,7 +148,7 @@ export default async function Page({ params }: Props) {
             {s.krs && <div><dt>KRS</dt><dd>{s.krs}</dd></div>}
           </dl>
           <h2 className="h3" id="wsparcie" style={{ marginTop: 44 }}>Jak można pomóc</h2>
-          <p className="prose">Wolontariat przy spływach, marszach i wyjazdach z młodzieżą, użyczenie sprzętu albo miejsca na zajęcia, wsparcie finansowe konkretnego wyjazdu. Napisz, w czym chcesz pomóc, a odezwiemy się z konkretem.</p>
+          <p className="prose">Napisz, w czym chcesz pomóc: czasem, sprzętem albo wsparciem konkretnego wyjazdu. Fundacja odpowie, co jest teraz potrzebne.</p>
         </div>
         <div className="aside"><p className="aside-h">Napisz do nas</p><InquiryForm kind="message" /></div>
       </div></div>

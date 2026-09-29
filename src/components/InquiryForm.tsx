@@ -32,7 +32,7 @@ export function InquiryForm({ kind = 'message', rental }: { kind?: string; renta
       <label>Wiadomość<textarea name="message" rows={4} placeholder={rental ? 'Skąd grupa, ile osób, czy potrzebna trasa i opieka' : ''} /></label>
       {state.message && !state.ok && <p className="form-err" role="alert">{state.message}</p>}
       <button className="btn btn-accent" disabled={pending}>{pending ? 'Wysyłanie…' : rental ? 'Wyślij zapytanie' : 'Wyślij wiadomość'}</button>
-      <p className="note">{rental ? 'Mamy 12 kajaków i 20 rowerów. Grupy z sektora pomocy i integracji społecznej mogą liczyć na zniżki.' : 'Zgłoszenie trafia do panelu fundacji, bez pośredników.'}</p>
+      <p className="note">{rental ? 'Fundacja ma 12 kajaków i 20 rowerów. Grupy z sektora pomocy i integracji społecznej mogą liczyć na zniżki.' : 'Zgłoszenie trafia do panelu fundacji, bez pośredników.'} Wersja demonstracyjna: dane trafiają do testowego panelu Programo i są kasowane, nie wpisuj prawdziwych danych osobowych.</p>
     </form>
   )
 }

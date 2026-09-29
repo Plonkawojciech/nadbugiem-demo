@@ -4,7 +4,7 @@
 :root{
   --navy:#16324F; --navy-2:#0F2439; --sky:#EAF1F8; --sky-2:#DCE7F2; --paper:#fff;
   --ink:#14202C; --grey:#5B6673; --edge:rgba(20,32,44,.13); --edge-soft:rgba(20,32,44,.07);
-  --red:#C8322B; --red-lift:#DC4238;
+  --red:#C8322B; --red-lift:#A8281F;
   --wrap:1180px; --gut:22px; --r:10px;
   --t:.28s cubic-bezier(.2,.7,.3,1);
 }
@@ -139,6 +139,8 @@ button,input,textarea,select{font:inherit;color:inherit}
 .projlist small{display:block;font-size:13px;color:var(--grey);margin-top:3px}
 .ptable{width:100%;border-collapse:collapse;margin-top:40px}
 .ptable td{padding:18px 0;border-bottom:1px solid var(--edge);vertical-align:top;font-size:15px}
+.ptable th{font-size:12px;font-weight:700;color:var(--grey);text-align:left;padding:0 0 10px;border-bottom:1px solid var(--edge)}
+.ptable th.num{text-align:right}
 .ptable td:first-child{width:76px;padding-right:12px}
 .ptable td b{display:block;font-size:16px;line-height:1.35}
 .ptable td small{display:block;color:var(--grey);font-size:13px;margin-top:4px;max-width:60ch}

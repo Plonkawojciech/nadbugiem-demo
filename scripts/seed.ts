@@ -32,8 +32,7 @@ async function main() {
       lead: 'Streetworker Andrzej Grajczyk i Piotr Ossliński wzięli udział razem z instruktorem survivalu Radosławem Grajczykiem w całodniowym biwaku w Kampinoskim Parku Narodowym. Uczyli skautów technik szkoły przetrwania.',
       body: 'W szkoleniu wzięła udział ponad setka uczestników, w zdecydowanej większości mocno zainteresowanych zdobyciem wiedzy i wcielaniem jej w życie, najlepiej od razu, jeszcze w trakcie omawiania poszczególnych technik. Ilu było uczestników, tyle zanosiło się na ognisk, bo każdy chciał rozpalić je samodzielnie. Zapędy młodych adeptów studził Piotr, uspokajając emocje opowieściami.\n\nMłodzi adepci survivalu pochodzili z Płocka, Niepokalanowa, Lasek, Łomianek i kilku mniejszych miejscowości. Dzień i wieczór spędzili w sposób, który na długo zapadnie im w pamięć. Nam jest bardzo miło, że mogliśmy reprezentować Wyszków i podzielić się technikami survivalowymi, na których opieramy działania streetworkerskie.' },
     { title: 'Aquaparkowy relaks', slug: 'aquaparkowy-relaks', date: '2026-05-29', project: JUL,
-      imageUrl: F + 'pliki/upload/galerie/0043/00938_foto.jpg', galleryUrls: G('0043', [938, 939, 940, 941]),
-      lead: 'Tym razem, ku wielkiemu zdziwieniu gawiedzi, zero presji i wysiłku, zero stawianych zadań. Luz i rekreacja w Aquaparku Łódź.',
+      lead: 'Tym razem zero presji i wysiłku, zero stawianych zadań. Luz i rekreacja w Aquaparku Łódź.',
       body: 'To był wypad w nagrodę za dotychczasowe zaangażowanie w spotkania i zajęcia streetworkerskie.' },
     { title: 'Kulig', slug: 'kulig-2026', date: '2026-02-10', author: 'Andrzej Grajczyk', project: 'Kulig został zorganizowany przez Fundację Nad Bugiem w ramach projektu „JulKlandia. Pedagogika niekonwencjonalna w 2026 roku” — zadania z zakresu zdrowia publicznego zleconego przez Gminę Wyszków.',
       imageUrl: F + 'pliki/upload/galerie/0042/00922_foto.jpg', galleryUrls: G('0042', [922, 923, 924, 925, 926, 927]),
@@ -49,7 +48,7 @@ async function main() {
 
   const KONK = 'Otwarty konkurs ofert Burmistrza Wyszkowa, art. 14 ust. 1 ustawy z 11 września 2015 r. o zdrowiu publicznym'
   const projects: any[] = [
-    { year: 2026, name: 'JulKlandia. Pedagogika niekonwencjonalna w 2026 roku', funder: 'Gmina Wyszków', basis: 'Zadanie z zakresu zdrowia publicznego', current: true, body: 'Spływ Czarnobylski, kulig, wyjazdy do Wilanowa i Aquaparku Łódź, cotygodniowe spotkania streetworkerskie.' },
+    { year: 2026, name: 'JulKlandia. Pedagogika niekonwencjonalna w 2026 roku', funder: 'Gmina Wyszków', basis: 'Zadanie z zakresu zdrowia publicznego', current: true, body: 'Spływ Czarnobylski, kulig, wyjazdy do Wilanowa i Aquaparku Łódź oraz bieżące zajęcia streetworkerskie.' },
     { year: 2021, name: 'Juklandia. Pedagogika niekonwencjonalna w Gminie Wyszków w 2021 roku', funder: 'Gmina Wyszków', amount: 89250, basis: KONK },
     { year: 2020, name: 'Juklandia. Pedagogika niekonwencjonalna w Gminie Wyszków w 2020 roku', funder: 'Gmina Wyszków', amount: 89250, basis: KONK },
     { year: 2019, name: 'Juklandia. Pedagogika niekonwencjonalna w Gminie Wyszków w 2019 roku', funder: 'Gmina Wyszków', amount: 85000, basis: KONK },
@@ -57,15 +56,15 @@ async function main() {
     { year: 2017, name: 'Pedagogika osiedlowa i ulicy w Wyszkowie w 2017 roku', funder: 'Gmina Wyszków', amount: 57000, basis: 'Otwarty konkurs ofert na realizację zadań pożytku publicznego z zakresu przeciwdziałania patologiom społecznym' },
     { year: 2016, name: 'Pedagogika osiedlowa i ulicy w Wyszkowie w 2016 roku', funder: 'Gmina Wyszków', amount: 57000, basis: 'Otwarty konkurs ofert na realizację zadań pożytku publicznego z zakresu przeciwdziałania patologiom społecznym' },
     { year: 2015, name: 'Pedagogika osiedlowa i ulicy w Wyszkowie w 2015 roku', funder: 'Gmina Wyszków', amount: 57000, basis: 'Otwarty konkurs ofert na realizację zadań pożytku publicznego z zakresu przeciwdziałania patologiom społecznym' },
-    { year: 2014, name: '„U sąsiada za miedzą” — widowisko folklorystyczne Zespołu Pieśni i Tańca „Oberek”', funder: 'Gmina Wyszków', basis: 'Zadanie „Prowadzenie zespołów tanecznych, wokalnych, rockowych”', body: 'Tańce, pieśni, przyśpiewki i gadki z terenów Puszczy Białej oraz sąsiednich Puszczy Zielonej i Podlasia, 1.01–31.12.2014.' },
-    { year: 2013, name: '„Się Dzieje!” Wyszkowski Inkubator Pozarządowy', funder: 'Europejski Fundusz Społeczny, PO Kapitał Ludzki 5.4.2', basis: 'Projekt realizowany XI 2011 – XI 2013; w jego efekcie powstała fundacja', body: 'Rozwój dialogu obywatelskiego i potencjału trzeciego sektora w powiecie wyszkowskim.' },
+    { year: 2014, name: '„U sąsiada za miedzą” — widowisko folklorystyczne Zespołu Pieśni i Tańca „Oberek”', funder: 'Gmina Wyszków', amount: 7000, basis: 'Zadanie „Prowadzenie zespołów tanecznych, wokalnych, rockowych”', body: 'Tańce, pieśni, przyśpiewki i gadki z terenów Puszczy Białej oraz sąsiednich Puszczy Zielonej i Podlasia, 1.01–31.12.2014.' },
+    { year: 2013, name: '„Się Dzieje!” Wyszkowski Inkubator Pozarządowy — projekt, w którym powstała fundacja', funder: 'Fundacja rower.com, Europejski Fundusz Społeczny (PO KL 5.4.2)', basis: 'Projekt realizowany XI 2011 – XI 2013 przez Fundację rower.com; Fundacja Nad Bugiem powstała w jego ramach', body: 'Rozwój dialogu obywatelskiego i potencjału trzeciego sektora w powiecie wyszkowskim.' },
   ]
   for (const p of projects) await payload.create({ collection: 'projects', data: p })
   console.log('[seed] projekty:', projects.length)
 
   const team: any[] = [
     { name: 'Andrzej Grajczyk', role: 'Prezes zarządu, pedagog ulicy', phone: '691 801 440', email: 'andrzejgrajczyk@wp.pl', order: 1, imageUrl: F + 'pliki/oferta/andrzej.jpg',
-      bio: 'Główny realizator projektów pedagogiki ulicy w Wyszkowie od 2008 roku, absolwent szkolenia z pedagogiki ulicy w programie „Partnerstwo dla Dzieci” Fundacji Wspólna Droga. Instruktor sztuk walki, założyciel i trener sekcji karate prowadzonej od 1991 roku. Organizator spływów kajakowych, zajęć survivalowych, nocnych marszy i wycieczek kondycyjno-krajoznawczych.' },
+      bio: 'Główny realizator projektów pedagogiki ulicy w Wyszkowie od 2008 roku, absolwent szkolenia z pedagogiki ulicy w programie „Partnerstwo dla Dzieci” Fundacji Wspólna Droga. Instruktor sztuk walki, założyciel i trener sekcji karate prowadzonej od 1991 roku. Organizator spływów kajakowych, zajęć survivalowych, nocnych marszów i wycieczek kondycyjno-krajoznawczych.' },
     { name: 'Anna Brajczewska', role: 'Wiceprezes zarządu', order: 2 },
     { name: 'Alicja Kasińska', role: 'Wiceprezes zarządu', order: 3 },
     { name: 'Danuta Laskowska', role: 'Fundatorka', order: 4, imageUrl: F + 'pliki/oferta/danusia.jpg',
@@ -92,15 +91,15 @@ async function main() {
   console.log('[seed] partnerzy:', partners.length)
 
   await payload.updateGlobal({ slug: 'settings', data: {
-    banner: 'Sezon spływów i rajdów rowerowych trwa. Grupy: zapytaj o wolne terminy.',
+    banner: 'Streetworking w gminie Wyszków od 2015 roku na zlecenie Gminy Wyszków.',
     heroTitle: 'Zabieramy wyszkowską młodzież tam, gdzie sama by nie trafiła',
     heroText: 'Pedagogika niekonwencjonalna na osiedlach i w terenie: spływy z lekcją historii, marsze pamięci, survival, forty i pałace. Od 2015 roku na zlecenie Gminy Wyszków. Do tego społeczna wypożyczalnia kajaków i rowerów.',
     heroImageUrl: F + 'pliki/upload/galerie/0045/00967_foto.jpg',
     mission: 'Fundacja Nad Bugiem powstała, żeby wspierać i inicjować działalność społecznie użyteczną na rzecz społeczności lokalnej. Pracujemy metodą streetworkingu z dziećmi i młodzieżą z osiedli zagrożonych marginalizacją, prowadzimy społeczną wypożyczalnię kajaków i rowerów.',
     pillars: [
       { title: 'Streetworking w Wyszkowie', body: 'Pedagodzy ulicy spędzają czas z dziećmi i młodzieżą, których nie obejmuje żadna świetlica ani klub: na osiedlach, w terenie, na spływach i wycieczkach. Realizujemy to od 2015 roku na zlecenie Gminy Wyszków.', href: '/aktualnosci' },
-      { title: 'Wypożyczalnia kajaków i rowerów', body: '12 kajaków i 20 rowerów w barwach Wyszkowa. Za drobną odpłatnością dla każdego, ze zniżkami dla grup z sektora pomocy i integracji społecznej.', href: '/wypozyczalnia' },
-      { title: 'Projekty i zadania publiczne', body: 'Od „Się Dzieje!” po „JulKlandię”: projekty finansowane z EFS i konkursów ofert Burmistrza Wyszkowa, z kwotami publikowanymi jak w sprawozdaniu.', href: '/projekty' },
+      { title: 'Wypożyczalnia kajaków i rowerów', body: '12 kajaków i 20 rowerów w barwach Wyszkowa. Spływy i rajdy dla zorganizowanych grup z sektora pomocy i integracji społecznej; rowery za drobną odpłatnością dla każdego.', href: '/wypozyczalnia' },
+      { title: 'Projekty i zadania publiczne', body: 'Od „Się Dzieje!” po „JulKlandię”: zadania z konkursów ofert Burmistrza Wyszkowa, z latami i kwotami dofinansowania.', href: '/projekty' },
     ],
     history: 'Fundacja Nad Bugiem została ufundowana przez Danutę i Artura Laskowskich i zarejestrowana w Krajowym Rejestrze Sądowym 28 lutego 2012 roku. Siedzibą jest Brańszczyk. Fundacja powstała w ramach „Się Dzieje! Wyszkowskiego Inkubatora Pozarządowego”, projektu realizowanego od listopada 2011 do listopada 2013 roku i dofinansowanego z Europejskiego Funduszu Społecznego (Program Operacyjny Kapitał Ludzki, poddziałanie 5.4.2 „Rozwój dialogu obywatelskiego”).\n\nPierwsze wyzwania, jakie sobie postawiliśmy, to organizacja centrum wolontariatu w gminie Brańszczyk, organizacja czasu wolnego dzieci i młodzieży oraz wsparcie dla osób samotnych i schorowanych. Od 2015 roku fundacja kontynuuje wyszkowski streetworking, prowadzony wcześniej przez Stowarzyszenie Inicjatyw Społecznych WIATRAK.\n\nSkład zarządu (stan na 1 marca 2026 roku): Andrzej Grajczyk — prezes, Anna Brajczewska — wiceprezes, Alicja Kasińska — wiceprezes.',
     rentalIntro: 'Fundacja prowadzi Społeczną Wypożyczalnię. Specjalizujemy się w organizowaniu spływów kajakowych i rajdów rowerowych dla zorganizowanych grup z sektora pomocy i integracji społecznej. Dysponujemy 12 kajakami i 20 rowerami.',

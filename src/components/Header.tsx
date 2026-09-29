@@ -25,15 +25,15 @@ export function Header() {
             <span><b>Fundacja Nad Bugiem</b><small>Brańszczyk · Wyszków</small></span>
           </Link>
           <nav className="nav" aria-label="Główne">
-            {NAV.map(([l, h]) => <Link key={h} href={h} className={active(h) ? 'on' : ''}>{l}</Link>)}
+            {NAV.map(([l, h]) => <Link key={h} href={h} className={active(h) ? 'on' : ''} aria-current={active(h) ? 'page' : undefined}>{l}</Link>)}
           </nav>
           <div className="head-act">
             <Link href="/kontakt#wsparcie" className="btn btn-accent btn-sm">Wesprzyj</Link>
-            <button className="burger" aria-expanded={open} aria-label="Menu" onClick={() => setOpen((o) => !o)}><span /><span /><span /></button>
+            <button className="burger" aria-expanded={open} aria-controls="menu-mobile" aria-label="Menu" onClick={() => setOpen((o) => !o)}><span /><span /><span /></button>
           </div>
         </div>
       </header>
-      <nav className={'drawer' + (open ? ' open' : '')} aria-label="Menu mobilne">
+      <nav id="menu-mobile" className={'drawer' + (open ? ' open' : '')} aria-label="Menu mobilne">
         {NAV.map(([l, h]) => <Link key={h} href={h}>{l}</Link>)}
       </nav>
     </>
