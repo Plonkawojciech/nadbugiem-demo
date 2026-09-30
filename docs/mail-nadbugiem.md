@@ -31,3 +31,5 @@ Uwagi dla handlowca (nie do wysyłki):
   potwierdzić zgody (RODO) i zapytać o numer KRS do stopki.
 - Artur Laskowski jest od 1 marca 2026 zastępcą Burmistrza Wyszkowa (informacja ze strony klienta) — bio zostawione
   jak u klienta, ale warto zapytać, czy nadal ma figurować przy wypożyczalni.
+- Nazwa projektu występuje u klienta w dwóch pisowniach: „Juklandia” (lista projektów 2019–2021) i „JulKlandia”
+  (wpisy z 2026). Demo zachowuje obie jak w źródle; zapytać, która jest właściwa.
