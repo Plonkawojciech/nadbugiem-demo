@@ -32,11 +32,19 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
         <footer className="foot">
           <div className="wrap partners">
             <p className="foot-h">Nasi darczyńcy i partnerzy</p>
-            <ul className="logos">
-              {partners.docs.map((p) => (
-                <li key={p.id}>{p.url ? <a href={p.url} rel="noopener" target="_blank" title={p.name}>{p.logoUrl ? <img src={p.logoUrl} alt={p.name} loading="lazy" referrerPolicy="no-referrer" /> : p.name}</a> : (p.logoUrl ? <img src={p.logoUrl} alt={p.name} loading="lazy" referrerPolicy="no-referrer" /> : <span>{p.name}</span>)}</li>
-              ))}
-            </ul>
+            <div className="marquee" aria-label="Darczyńcy i partnerzy">
+              <ul className="logos marquee-track">
+                {[...partners.docs, ...partners.docs].map((p, i) => {
+                  const dup = i >= partners.docs.length
+                  const inner = p.logoUrl ? <img src={p.logoUrl} alt={dup ? '' : p.name} loading="lazy" referrerPolicy="no-referrer" /> : <span>{p.name}</span>
+                  return (
+                    <li key={`${p.id}-${i}`} aria-hidden={dup || undefined}>
+                      {p.url ? <a href={p.url} rel="noopener" target="_blank" title={p.name} tabIndex={dup ? -1 : undefined}>{inner}</a> : inner}
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </div>
           <div className="wrap foot-grid">
             <div>
